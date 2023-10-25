@@ -1,0 +1,33 @@
+﻿@page
+@model Frontend.Pages.CarroListModel
+@{
+}
+
+<div class="row">
+    <div class="col-10">
+        <h1>Carros Disponibles</h1>
+    </div>
+</div>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Proveedor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var r in Model.Carros)
+        {
+            <tr>
+                <td>@r.Id</td>
+                <td>@r.Marca</td>
+                <td>@r.Modelo</td>
+                <td>@r.Proveedor</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

@@ -1,0 +1,36 @@
+﻿@page
+@model Frontend.Pages.ProveedorEditModel
+@{
+}
+
+<div class="row">
+    <div class="col-10">
+        <h1>Proveedor</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./List">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+</div>
+<form method="post" action="">
+    <input type="hidden" asp-for="Proveedor.Id">
+    <div class="form-group">
+        <label asp-for="Proveedor.Nombre"></label>
+        <input asp-for="Proveedor.Nombre" class="form-control">
+        <span asp-validation-for="Proveedor.Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Proveedor.Apellido"></label>
+        <input asp-for="Proveedor.Apellido" class="form-control">
+        <span asp-validation-for="Proveedor.Apellido" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Proveedor.Cedula"></label>
+        <input asp-for="Proveedor.Cedula" class="form-control">
+        <span asp-validation-for="Proveedor.Cedula" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="top" title="Guardar">
+        <i class="fas fa-2x fa-save"></i>        
+    </button>
+</form>

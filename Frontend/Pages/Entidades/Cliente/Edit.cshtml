@@ -1,0 +1,41 @@
+﻿@page
+@model Frontend.Pages.ClienteEditModel
+@{
+}
+
+<div class="row">
+    <div class="col-10">
+        <h1>Cliente</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./List">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+</div>
+<form method="post" action="">
+    <input type="hidden" asp-for="Cliente.Id">
+    <div class="form-group">
+        <label asp-for="Cliente.Nombre"></label>
+        <input asp-for="Cliente.Nombre" class="form-control">
+        <span asp-validation-for="Cliente.Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Cliente.Apellido"></label>
+        <input asp-for="Cliente.Apellido" class="form-control">
+        <span asp-validation-for="Cliente.Apellido" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Cliente.Cedula"></label>
+        <input asp-for="Cliente.Cedula" class="form-control">
+        <span asp-validation-for="Cliente.Cedula" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Cliente.Interes"></label>
+        <input asp-for="Cliente.Interes" class="form-control">
+        <span asp-validation-for="Cliente.Interes" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="top" title="Guardar">
+        <i class="fas fa-2x fa-save"></i>        
+    </button>
+</form>

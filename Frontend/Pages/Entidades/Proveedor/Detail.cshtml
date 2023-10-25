@@ -1,0 +1,39 @@
+﻿@page
+@model Frontend.Pages.ProveedorDetailModel
+@{
+}
+
+<div class="row">
+    <div class="col-10">
+        <h1>Proveedor</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./List">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+</div>
+<div class=row>
+    <div class=col-4>
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td>@Model.Proveedor.Id</td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td>@Model.Proveedor.Nombre</td>
+                </tr>
+                <tr>
+                    <td>Apellido</td>
+                    <td>@Model.Proveedor.Apellido</td>
+                </tr>
+                <tr>
+                    <td>Cedula</td>
+                    <td>@Model.Proveedor.Cedula</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
